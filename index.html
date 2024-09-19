@@ -17,27 +17,37 @@
 <body>
     <div id="app">
         <nav class="navbar">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="src/The_Bartender_Tales_Logo.png" alt="Logo" width="40" height="40"
-                        class="d-inline-block align-text-top">
-                    The Bartender Tales
-                </a>
-                <div class="dropdown-center">
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        References
+            <div class="container-fluid ">
+                <div class="col">
+                    <a class="navbar-brand" href="#">
+                        <img src="src/The_Bartender_Tales_Logo.png" alt="Logo" width="40" height="40"
+                            class="d-inline-block align-text-top">
+                        The Bartender Tales
                     </a>
-
-                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-start">
-                        <li><a class="dropdown-item"
-                                href="https://www.dmsguild.com/browse.php?affiliate_id=4141531&src=G">dmsguild home
-                                page</a></li>
-                        <li><a class="dropdown-item"
-                                href="https://www.dmsguild.com/browse.php?author=The%20Bartender%20Tales&affiliate_id=4141531&src=G">my
-                                products on dmsguild</a></li>
-                    </ul>
                 </div>
+                <div class="w-auto">
+                    <div class="dropdown-md-center">
+                        <a class="btn btn-secondary dropdown-toggle w-auto" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <text class="d-none d-sm-inline">
+                                References
+                            </text>
+                            <text class="d-inline d-sm-none">
+                                Links
+                            </text>
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-start">
+                            <li><a class="dropdown-item"
+                                    href="https://www.dmsguild.com/browse.php?affiliate_id=4141531&src=G">dmsguild home
+                                    page</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://www.dmsguild.com/browse.php?author=The%20Bartender%20Tales&affiliate_id=4141531&src=G">my
+                                    products on dmsguild</a></li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </nav>
         <!-- About 1 - Bootstrap Brain Component -->
@@ -119,11 +129,14 @@
                 <div class="row gy-3 gy-md-4 gy-lg-0 ">
                     <div class="col-12 col-lg-6 col-xl-7">
                         <div class="col-12 col-xl-11">
-                            <h2 class="mb-3">{{products[active].title}}</h2>
+                            <transition name="fade" mode="out-in">
+                                <h2 class="mb-3" :key="active">{{products[active].title}}</h2>
+                            </transition>
                             <p class="mb-5">
                                 {{products[active].description}}
                             </p>
-                            <a href="https://www.dmsguild.com/browse.php?author=The%20Bartender%20Tales&affiliate_id=4141531&src=G" type="button" class="btn btn-primary align-items-lg-center">Get now</a>
+                            <a :href="products[active].link " type="button"
+                                class="btn btn-primary align-items-lg-center">Get now</a>
                         </div>
                     </div>
 
@@ -144,8 +157,8 @@
                                 data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
+                            </button>
                         </div>
-                        </button>
                     </div>
                 </div>
             </div>
