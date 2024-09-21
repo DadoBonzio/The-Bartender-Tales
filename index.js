@@ -14,6 +14,19 @@ const app = Vue.createApp({
           image: './src/products/Spebble_The_Wizard_Goldfish.jpg',
           description: "This book series is about sideckicks, officially described in 5th edition in the rulebook: Tasha’s Cauldron of Everything (TCE for short, p.142). Every installment of this serie is going to be about a different sidekick, and aims to cover anything you might ever need to run him at your table: From finding it to recruit it. In order to mantain the sidekicks as setting neutral as possible, the content of this document has the sole purpose of reference and inspiration: change everything that would clash with your setting",
           link: "https://www.dmsguild.com/product/493022/Spebble--The-Wizard-Goldfish?affiliate_id=4141531&src=G"
+        },
+        {
+          title: 'The Draconic Knight',
+          image: './src/products/The_Draconic_Knight.jpg',
+          description: "Dreamed of harnessing your draconic ancestry inside your blade, rather than your spells? The Draconic Knight might just be the Fighter Subclass you were looking for!",
+          link: "https://www.dmsguild.com/product/491352/Fighter-Subclass-The-Draconic-Knight?affiliate_id=4141531&src=G"
+        },
+        {
+          title: 'Sir Zack Theolin III',
+          image: './src/products/Sir_Zack_Theolin_III.jpg',
+          description: "Smidvarg was his original name, forgotten to anyone but him when he was left behind by his tribe during a pilgrimage. Days passed as he was found by the spoiled little daughter (Saria) of a rich landlord that was traveling nearby. Saria convinced his father to keep him as a \"pet\". He developed a friendship with this little girl through her youth, and he was, thanks to her will, raised as if he were her brother, while his father, who saw him as a threat to his reputation, searched for an excuse get rid of him. He found it when his daughter got ill: Sir Zack Theolin III (that was his new name, given by the little girl) was sent to look for a magic (invented) plant that would cure his sister's disease.",
+          link: "https://www.dmsguild.com/product/491537/Premade-Character-Sir-Zack-Theolin-III-the-Kobold-Fighter?affiliate_id=4141531&src=G"
+
         }
       ]
     })
